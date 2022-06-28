@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+const romanValues = {
+  I: 1,
+  V: 5,
+  X: 10,
+  L: 50,
+  C: 100,
+  D: 500,
+  M: 1000,
+};
 
-function App() {
+const romanArrayCreator = (s) => {
+  if (s.search("IV") > 0) {
+    return true;
+  } else {
+    return [...s];
+  }
+};
+
+const romanToInteger = (s) => {
+  let sum = 0;
+  let tempArray = [];
+
+  for (const element of [...s]) {
+    sum += romanValues[element];
+    //tempArray.push(romanValues[element]);
+  }
+
+  //console.log(sum);
+};
+
+
+//console.log(romanArrayCreator("IV"))
+
+let text = "NathanDSD";
+let n = text.search(/asdfasdnath/i);
+console.log(n)
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Leet</h1>
     </div>
   );
-}
+};
 
 export default App;
