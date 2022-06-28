@@ -28,12 +28,27 @@ const romanToInteger = (s) => {
   //console.log(sum);
 };
 
-
 //console.log(romanArrayCreator("IV"))
 
 let text = "NathanDSD";
 let n = text.search(/asdfasdnath/i);
-console.log(n)
+//console.log(n);
+
+const reverseInt = (int) => {
+  return [...int.toString()].reverse().join("");
+};
+
+console.log(reverseInt(41111));
+
+const palindroneInt = (int) => {
+  if (int.toString() === [...int.toString()].reverse().join("")) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+console.log(palindroneInt(3122213));
 
 const App = () => {
   return (
